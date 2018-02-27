@@ -1,0 +1,998 @@
+/******************************************/
+/****************SETUP********************/
+/****************************************/
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Open Sans;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    overflow-x: hidden;
+}
+
+
+
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+
+ul, h1{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+p{
+  font-size: 13px;
+}
+
+
+
+
+a{
+  color: #e67e22;
+  transition: color 0.5s;
+}
+
+
+
+
+a:hover{
+  color: orange !important;
+}
+
+
+
+
+button{
+  cursor: pointer;
+  outline: none;
+  letter-spacing: 1.5px;
+}
+
+
+
+
+button:active{
+  transform: translateY(1px);
+}
+
+
+
+
+.button-filled{
+    background-color: #e67e22;
+    color: #efefef;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 15px;
+    box-shadow: 0 -1px 0 0 rgba(0,0,0,.2) inset, 0 1px 1px 0 rgba(0,0,0,.2);
+    transition: background-color 0.5s;
+}
+
+
+
+
+.button-filled:hover{
+  background-color: orange;
+}
+
+
+
+
+.button-empty{
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 15px;
+}
+
+
+
+
+.menu-toggle{
+  padding: 14px 17px;
+  color: white;
+  background-color: #e67e22;
+  float: right;
+  margin-right: 50px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  box-shadow: 0 -1px 0 0 rgba(0,0,0,.2) inset, 0 1px 1px 0 rgba(0,0,0,.2);
+  position: fixed;
+  right: -25px;
+  z-index: 9999999;
+  transition: background-color 0.5s;
+}
+
+
+
+
+.menu-toggle:hover{
+  background-color: orange;
+}
+
+
+
+
+.menu-toggle:active{
+  box-shadow: inset 3px 5px 3px rgba(0,0,0,.175);
+}
+
+
+
+
+.highlight{
+ color: #e67e22;
+}
+
+
+
+
+/*Back to top button BEGIN*/
+
+#scroll {
+    display: none;
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color: #e67e22;
+    text-indent:-9999px;
+    display:none;
+    border-radius:60px;
+    transition: background-color 0.5s;
+}
+
+
+
+
+#scroll *{
+    z-index: 9999999;
+}
+
+
+
+
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+
+
+
+
+#scroll:hover {
+    background-color:#505050;
+    opacity:1;filter:"alpha(opacity=100)";
+}
+
+/*Back to top button END*/
+
+
+
+
+/******************************************/
+/****************HEADER/NAVBAR************/
+/****************************************/
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../content/images/niklas-rhose-14304.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header nav{
+    max-width: 300px;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.45);
+    text-align: center;
+    font-size: 13px;
+    position: fixed;
+    left: -300px;
+    z-index: 9999;
+    transition: background-color 0.7s, left 0.60s ease-in-out;
+}
+
+
+
+
+header nav.dark{
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+
+
+
+header nav #brand{
+    font-size: 80px; /*Make circle border around brand*/
+    color: #e67e22;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+
+
+
+
+header nav #brand .fa-anchor{
+    border: 5px solid #ffffff;
+    padding: 30px;
+    border-radius: 100px;
+    background-color: #303030;
+}
+
+
+
+
+header nav #nav-links li{
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+
+
+
+header nav #nav-links li a{
+    text-decoration: none;
+    color: #909090; 
+    transition: color 0.5s;
+}
+
+
+
+
+header nav #nav-links li a:hover{
+    color: #efefef !important;
+}
+
+
+
+
+#social{
+    color: #efefef;
+}
+
+
+
+
+
+#social li{
+  list-style: none;
+}
+
+
+
+
+#social li:first-child, #social li:nth-of-type(2){
+    color: #7b7b7b;
+}
+
+
+
+
+#social .fa-twitter{
+    color: #e67e22;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+
+#social a{
+    color: #e67e22;
+}
+
+
+
+
+#copyright{
+    margin-top: 3px;
+    color: #efefef;
+}
+
+
+
+
+#copyright i{
+    margin-bottom: 0px;
+    padding: 0 5px;
+}
+
+
+
+
+#copyright p{
+    color: #7b7b7b;
+    line-height: 1.5;
+}
+
+
+
+
+#welcome{
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    color: #ffffff;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+
+
+
+
+
+
+
+#welcome p{
+    font-style: italic;
+}
+
+
+
+
+.move{
+  left: 0px;
+}
+
+
+
+
+/******************************************/
+/****************ABOUT********************/
+/****************************************/
+
+#about{
+  min-height: 550px;
+  background-color: #f6fdf6;
+}
+
+
+
+
+#about .container{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+#about #bio{
+  width: 60%;
+  float: left;
+}
+
+
+
+
+#about #bio *{
+  width: 70%;
+  float: right;
+  margin-right: 70px; 
+}
+
+p {}
+
+
+
+
+#about #bio h1{
+  margin-top: 50px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+
+
+
+#about #bio h3{
+  margin-bottom: 0; 
+}
+
+
+
+
+#about #bio h5{
+  margin-top: 0;
+  line-height: 0;
+  font-style: italic;
+}
+
+
+
+
+#about #bio p{
+  line-height: 2;
+}
+
+
+
+
+#about #bio p:nth-of-type(1){
+  font-weight: 300;
+  font-style: italic;
+  margin-top: 30px;
+}
+
+
+
+
+#about #chef-img{
+  width: 40%;
+  min-height: 550px;
+  float: right;
+  background-image: url("../content/images/matthieu-joannon-172774.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+
+
+/******************************************/
+/****************GALLERY******************/
+/****************************************/
+
+#gallery{
+  background-color: #2a3035;
+  color: #efefef;
+  text-align: center;
+}
+
+
+
+
+#gallery h1{
+  margin: 50px auto;
+  font-size: 45px;
+  font-weight: 300;
+}
+
+
+
+
+#gallery p{
+  margin-bottom: 70px;
+  line-height: 2;
+}
+
+
+
+
+#btn-block{
+  margin-bottom: 80px;
+}
+
+
+
+
+#btn-block li{
+  display: inline;
+  
+}
+
+
+
+
+#btn-block li button{
+  background-color: #2c3e50;
+  border: none;
+  color: #efefef;
+  padding: 20px;
+  transition: background-color 0.5s;
+}
+
+
+
+
+#btn-block li button:hover{
+  background-color: #364452;
+}
+
+
+
+
+/******************************************/
+/****************PICTURES*****************/
+/****************************************/
+
+.photos{
+  background-color: black;
+  height: 100%;
+}
+
+
+
+
+.row{
+    list-style: none;
+    width: 100%;
+}
+
+
+
+
+.row figure{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 1;
+  transform: scale(1.20);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+
+
+/*
+.row figure:hover{
+    opacity: 1;
+    transform: scale(1);
+}
+*/
+
+
+
+
+.row li{
+    display: inline;
+    float: left;
+    width: 20%;
+    background-color: black;
+    overflow: hidden;
+}
+
+
+
+
+.row li img{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/******************************************/
+/****************SERVICES*****************/
+/****************************************/
+
+#services{
+  background-color: #efefef;
+  min-height: 500px;
+  clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+#services h1{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+
+
+
+#services p:nth-of-type(1){
+  margin-bottom: 70px;
+  margin-top: 50px;
+  line-height: 2;
+}
+
+
+
+
+#services p{
+  text-align: center;
+}
+
+
+
+
+#services ul{
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+
+
+#services ul li{
+  display: inline;
+  float: left;
+  width: 20%;
+  margin: 0 2.5%;
+  line-height: 2;
+}
+
+
+
+
+#services ul li i{
+  font-size: 48px;
+}
+
+
+
+
+#services h3{
+  color: #e67e22;
+}
+
+
+
+
+#services ul li p{
+  font-size: 12px;
+}
+
+
+
+
+/******************************************/
+/****************MENU*********************/
+/****************************************/
+
+#menu{
+  color: #ffffff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../content/images/brooke-lark-158019.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#menu h1{
+  margin: 50px 0px 70px 0px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 300;
+}
+
+
+
+
+
+#menu ul{
+  list-style: none;
+  width: 45%;
+  margin: 0 2.5%;
+}
+
+
+
+
+#menu ul li{
+  width: 80%;
+  margin: 0 21%;
+}
+
+
+
+
+#menu .left-menu{
+  float: left;
+}
+
+
+
+
+#menu .right-menu{
+  float: right;
+}
+
+
+
+
+#menu .button-filled{
+  margin: 50px 40% 70px 40%;
+  text-align: center;
+  width: 20%;
+}
+
+
+
+
+/******************************************/
+/****************MAPS*********************/
+/****************************************/
+
+.maps{
+    display: none;
+    width: 100%;
+    min-height: 400px;
+}
+
+
+
+
+/******************************************/
+/****************FOOTER*******************/
+/****************************************/
+
+
+footer{
+  background-color: #2a3035;
+  color: #efefef;
+}
+
+
+
+
+footer #social-media{
+  margin: 0 auto;
+  float: left;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+
+
+
+footer .fa-anchor{
+  text-align: center;
+  font-size: 64px;
+  margin: 30px auto;
+}
+
+
+
+
+footer #social-media li{
+  display: inline;
+  padding: 0 5px;
+}
+
+
+
+
+footer #address-info{
+  float: right;
+  margin-top: 30px;
+  font-weight: 300;
+}
+
+
+
+
+footer #address-info i{
+  float: left;
+  font-size: 20px;
+}
+
+
+
+
+footer #address-info ul{
+  list-style: none;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+
+
+
+footer #address-info ul li{
+  margin-left: 30px;
+}
+
+
+
+
+footer p{
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0px;
+  padding-bottom: 30px;
+}
+
+
+
+
+footer #contact{
+  background-color: #fff;
+  width: 30%; 
+  text-align: center;
+  color: black;
+  border-radius: 7px;
+  opacity: 0.5;
+  position: absolute;
+  z-index: 999;
+  left: 33%;
+  top: 470%;
+  transition: opacity 0.5s;
+}
+
+
+
+
+footer #contact:hover{
+  opacity: 1;
+}
+
+
+
+
+footer #contact h1{
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: 300;
+}
+
+
+
+
+footer #contact input{
+  background-color: #efefef;
+  border: 0.75px solid #dfdfdf;
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 7px;
+  outline: none;
+}
+
+
+
+
+footer #contact input[type = "textarea"]{
+  padding-bottom: 70px;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+
+
+
+footer .button-empty{
+  border: 2px solid black;
+  border-radius: 7px;
+  margin-bottom: 30px;
+}
+
+
+
+
+    footer #contact{
+  position: relative;
+  top: 0px;
+  left: 0;
+  border-radius: 0;
+  opacity: 0;
+  width: auto;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  transition: opacity 0.5s;
+
+}
+
+
+
+
+footer #contact.animated{
+  opacity: 1;
+
+}
+
+
+
+
+footer #contact .button-empty{
+  margin-bottom: 40px;
+}
+
+
+
+
+/******************************************/
+/***********ANIMATION SETTINGS************/
+/****************************************/
+
+#welcome{
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+
+
+
+
+#welcome.animated{
+    opacity: 1;
+}
+
+
+
+
+
+#about #bio{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+
+
+#about #bio.animated{
+    opacity: 1;
+}
+
+
+
+
+#services{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+
+
+#services.animated{
+    opacity: 1;
+}
+
+
+
+
+footer #contact{
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+
+
+
+footer #contact.animated{
+    opacity: 1;
+}
+
+
+
+
+
+
+

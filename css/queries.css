@@ -1,0 +1,240 @@
+/******************************************/
+/****************QUERIES******************/
+/****************************************/
+
+
+@media (max-width: 1450px){
+
+    footer #contact{
+  position: relative;
+  top: 0px;
+  left: 0;
+  border-radius: 0;
+  opacity: 0;
+  width: auto;
+  margin-bottom: 30px;
+  padding-top: 30px;
+  transition: opacity 0.5s;
+
+}
+
+
+
+
+footer #contact.animated{
+  opacity: 1;
+
+}
+
+
+
+
+footer #contact .button-empty{
+  margin-bottom: 40px;
+}
+  
+}
+
+
+
+
+
+@media (max-width: 982px){
+  
+  #about{
+      background-color: #000;
+    }
+
+    
+
+
+
+    #about #bio, #about #chef-img{
+      float: none;
+    }
+
+
+
+
+    #about #bio{
+      color: #ffffff;
+      width: 100%;
+      /* margin-left: -70px; */
+      position: relative;
+      z-index: 999;
+    }
+
+
+
+
+    #about #chef-img{
+      width: 100%;
+      opacity: 0.5;
+    }
+
+
+
+
+
+    #services ul li{
+      width: 40%;
+      margin: 0 5%;
+    }
+
+
+
+
+    #menu ul{
+      text-align: center;
+    }
+
+
+
+
+    #menu .left-menu, #menu .right-menu{
+      float: none;
+      clear: both;
+      width: 80%;
+      margin: 0 12%;
+    } 
+
+
+
+
+    #menu ul li{
+  width: auto;
+  margin: 0;
+}
+
+
+}
+
+
+
+
+@media (max-width: 882px){
+  
+#menu .button-filled{
+  width: 40%;
+  margin: 50px 32% 70px 32%;
+}
+
+  
+}
+
+
+
+
+@media (max-width: 768px){
+  
+ 
+  
+  
+
+
+
+.row li{
+  width: 50%;
+}
+
+
+
+
+
+footer #social-media, footer #address-info{
+  float: none;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+
+footer p {
+  text-align: center;
+}
+
+
+
+
+footer #address-info i {
+  display: none;
+}
+
+
+
+}
+
+
+
+
+@media (max-width: 623px){
+    
+   header nav{
+        background-color: rgba(0, 0, 0, .87);
+    }  
+    
+    
+    
+
+  #about #bio p{
+    width: 85%;
+    margin-right:40px;
+    
+  }
+
+
+
+
+  #gallery ul li button{
+    margin-bottom: 10px;
+  }
+
+
+
+
+  #services ul li{
+    width: 80%;
+    margin: 0 10%;
+  }
+
+  
+}
+
+
+
+
+
+@media (max-width: 486px){
+
+   #about{
+     background-color: #809080;
+   }
+
+
+
+
+    #about #chef-img{
+      display: none;
+    }
+
+}
+
+
+
+
+@media (max-width: 400px){
+   .photos .row li{
+    width: 100%;
+    margin: 0;
+  }
+
+  #menu h1, #services h1{
+    font-size: 2.25em;
+  }
+
+  #menu .button-filled{
+    font-size: .5em;
+  }
+
+}
